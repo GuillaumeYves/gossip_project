@@ -1,0 +1,21 @@
+<!-- views/index.erb -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bienvenue</title>
+</head>
+<body>
+  <h1>Bienvenue sur notre site de potins !</h1>
+  <h2>Voici les potins du moment :</h2>
+  
+  <% gossips.each do |gossip| %>
+  <p>
+    <%= gossip.author %><br/>
+    <%= gossip.content %>
+  </p>
+  <% end %>
+
+
+  <a href="/gossips/new/">Créer un nouveau potin</a>
+</body>
+</html>
